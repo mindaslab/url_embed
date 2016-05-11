@@ -3,6 +3,7 @@ require "test/unit"
 
 class  StringExtendTest < Test::Unit::TestCase
   @@url = "https://www.youtube.com/watch?v=1MdmEZ4Z-3A&project=url_embed"
+  @@github_url = "https://gist.github.com/mindaslab/bca764c03254a4a46ba87f2e6a4c09ed"
 
   def test_url
     assert @@url.url?, "0: String::url? method did not work"
@@ -41,5 +42,11 @@ class  StringExtendTest < Test::Unit::TestCase
     expected = false
     got = "http://google.com".embedable?
     assert_equal expected, got, "Testing String#embedable? for youtube"
+  end
+
+  def test_embedable_for_github
+    expected = true
+    got = @@github_url.embedable?
+    assert_equal expected, got, "Testing String#embedable? for github gist"
   end
 end

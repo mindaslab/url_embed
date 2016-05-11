@@ -1,6 +1,7 @@
 require 'uri'
 require 'cgi'
 require_relative "module_youtube.rb"
+require_relative "module_github_gist.rb"
 
 class String
   def embed
@@ -23,11 +24,12 @@ class String
   # returns true if the url is embedable in HTML
   def embedable?
     if self.url?
-      self.youtube?
+      self.youtube? or self.github_gist?
     else
       return false
     end
   end
 
   include Youtube
+  include GithubGist
 end
