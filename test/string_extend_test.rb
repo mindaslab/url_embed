@@ -45,10 +45,18 @@ class  StringExtendTest < Test::Unit::TestCase
     assert_equal expected, got, "Testing String#embedable? for youtube"
   end
 
-  def test_embedable_for_github
+  def test_embedable_for_github_gist
     expected = true
     got = @@github_url.embedable?
     assert_equal expected, got, "Testing String#embedable? for github gist"
+  end
+
+  def test_embed_for_github_gist
+    expected = %Q{
+      <script src="https://gist.github.com/mindaslab/bca764c03254a4a46ba87f2e6a4c09ed.js"></script>
+    }.strip
+    got = @@github_url.embed
+    assert_equal expected, got, "String#embed is not working"
   end
 
   def test_embed_for_image
