@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.3
+  - 2.3.0
 script:
   - ruby module_github_gist_test.rb
   - ruby module_image_test.rb
