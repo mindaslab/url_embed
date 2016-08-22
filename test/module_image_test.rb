@@ -10,11 +10,4 @@ class  ModuleImage < Test::Unit::TestCase
     assert_equal expected, got, "Image#image? failed"
   end
 
-  def test_github_gist_embed
-    expected = %Q{
-      <img src="#{@@url}" />
-    }.strip
-    got = @@url.image_embed
-    assert_equal expected, got, "GihubGist#gihub_gist_embed failed"
-  end
 end
