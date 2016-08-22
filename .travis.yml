@@ -5,4 +5,5 @@ script:
   - ruby test/module_github_gist_test.rb
   - ruby test/module_image_test.rb
   - ruby test/module_youtube_test.rb
+  - ruby test/module_video_test.rb
   - ruby test/string_extend_test.rb

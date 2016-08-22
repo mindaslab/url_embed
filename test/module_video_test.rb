@@ -12,7 +12,7 @@ class  ModuleVideo < Test::Unit::TestCase
 
   def test_video_embed
     expected = %Q{
-      <video src="https://something.com/movie.webm" controls>
+      <video src="#{@@url}" controls>
         Your browser does not support the <code>video</code> element.
       </video>
     }.strip

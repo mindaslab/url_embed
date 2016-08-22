@@ -10,6 +10,7 @@ class String
     return self.youtube_embed if self.youtube?
     return self.github_gist_embed if self.github_gist?
     return self.image_embed if self.image?
+    return self.video_embed if self.video?
   end
 
   def url?
@@ -28,7 +29,7 @@ class String
   # returns true if the url is embedable in HTML
   def embedable?
     if self.url?
-      self.youtube? or self.github_gist? or self.image?
+      self.youtube? or self.github_gist? or self.image? or self.video?
     else
       return false
     end
