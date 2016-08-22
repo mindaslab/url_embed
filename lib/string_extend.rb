@@ -3,6 +3,7 @@ require 'cgi'
 require_relative "module_youtube.rb"
 require_relative "module_github_gist.rb"
 require_relative "module_image.rb"
+require_relative "module_video.rb"
 
 class String
   def embed
@@ -36,4 +37,5 @@ class String
   include Youtube
   include GithubGist
   include Image
+  include Video
 end
