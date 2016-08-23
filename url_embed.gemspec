@@ -6,5 +6,6 @@ Gem::Specification.new do |s|
   s.description = "URL Embed converts an url into embedabble HTML"
   s.authors     = ["Karthikeyan A K"]
   s.email       = '77minds@gmail.com'
+  s.homepage    = "https://github.com/mindaslab/url_embed"
   s.files       = Dir['lib/*'].select { |e| File.file?(e) }
 end
