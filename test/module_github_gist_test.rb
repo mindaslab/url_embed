@@ -6,6 +6,7 @@ class  ModuleGihubGist < Test::Unit::TestCase
 
   def test_github_gist?
     expected = true
+    expected = 'a'
     got = @@url.github_gist?
     assert_equal expected, got, "GihubGist#gihub_gist? failed"
   end
